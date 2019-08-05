@@ -14,18 +14,20 @@ class MyApp extends StatelessWidget{
           title: Text('卜前程的flutterg'),
       ),
       body: Center(
-        child: Text(
-          "你好fullter你好fullter你好fullter你好fullter你好fullter你好fullter你好fullter",
-          textAlign: TextAlign.center,
-          maxLines: 1,
-          overflow: TextOverflow.fade,
-          style: TextStyle(
-            fontSize:25.0, 
-            color: Color.fromARGB(255, 255, 125, 125),
-            decoration: TextDecoration.underline,
-            decorationStyle: TextDecorationStyle.solid,
-          ),
-        ),
+        child:Container(
+          child: new Text('卜前程', style:TextStyle(fontSize: 29.0)),
+          alignment: Alignment.center,
+          width: 300.0,
+          height: 400.0,
+          padding: const EdgeInsets.fromLTRB(10.0,0.0,0.0,10.0),
+          margin: const EdgeInsets.all(10.0),
+          decoration: new BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [Colors.lightBlue,Colors.orange]
+            ),
+            border: Border.all(width: 5.0,color: Colors.orangeAccent)
+          )
+        )
       ),
       ),
     );
