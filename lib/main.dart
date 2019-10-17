@@ -1,9 +1,8 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart'; // ui库
-import 'bottom_navigation.dart';
-import 'package:dio/dio.dart';
-import 'package:flutter_bqc/routers.dart';
-import 'package:flutter_bqc/application.dart';
+import 'package:flutter_bqc/components/bottom_navigation.dart';
+import 'package:flutter_bqc/route/routers.dart';
+import 'package:flutter_bqc/config/application.dart';
 
 // 入口文件
 void main() {

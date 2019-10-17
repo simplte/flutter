@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart'; // ui库
-import 'page/search.dart';
+import 'package:flutter_bqc/page/search.dart';
 
 class BottomNavigator extends StatefulWidget {
   BottomNavigator({Key key}) : super(key: key);

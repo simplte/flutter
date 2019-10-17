@@ -1,7 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bqc/page/search.dart';
-import 'package:flutter_bqc/route_handlers.dart';
+import 'package:flutter_bqc/route/route_handlers.dart';
 
 class Routes {
   static Router router;
@@ -15,7 +15,7 @@ class Routes {
       print('地址无效');
       return SearhPage();
     });
-    router.define(root, handler: splashHandler);
+    router.define(root, handler: homeHandler);
     router.define(search, handler: searchHandler);
     router.define(zhuan, handler: zhuanHandler);
     Routes.router = router;

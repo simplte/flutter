@@ -11,8 +11,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:fluro_test/utils/fluro/fluro.dart';
-import 'package:fluro_test/utils/fluro/src/common.dart';
+import 'package:flutter_bqc/utils/fluro/fluro.dart';
+import 'package:flutter_bqc/utils/fluro/src/common.dart';
 
 class Router {
   static final appRouter = new Router();
@@ -123,17 +123,17 @@ class Router {
     RouteCreator creator =
         (RouteSettings routeSettings, Map<String, List<String>> parameters) {
       bool isNativeTransition = (transition == TransitionType.native ||
-          transition == TransitionType.nativeModal) ||
+              transition == TransitionType.nativeModal) ||
           transition == TransitionType.cupertino;
       if (isNativeTransition) {
-        if(transition == TransitionType.cupertino){
+        if (transition == TransitionType.cupertino) {
           return new CupertinoPageRoute<dynamic>(
               settings: routeSettings,
               fullscreenDialog: transition == TransitionType.nativeModal,
               builder: (BuildContext context) {
                 return handler.handlerFunc(context, parameters);
               });
-        }else{
+        } else {
           return new MaterialPageRoute<dynamic>(
               settings: routeSettings,
               fullscreenDialog: transition == TransitionType.nativeModal,

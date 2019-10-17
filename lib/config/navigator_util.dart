@@ -1,7 +1,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bqc/application.dart';
-import 'package:flutter_bqc/routers.dart';
+import 'package:flutter_bqc/config/application.dart';
+import 'package:flutter_bqc/route/routers.dart';
 import 'package:flutter_bqc/utils/fluro_convert_util.dart';
 
 class NavigatorUtils {
@@ -13,8 +13,19 @@ class NavigatorUtils {
     Navigator.pop(context, result);
   }
 
+  /// 跳转到 传参demo 页面
+  static void goDemoParamsPage(
+      BuildContext context, String name, int age, double score, bool sex) {
+    /// 对中文进行编码
+    String mName = FluroConvertUtils.fluroCnParamsEncode(name);
+
+    /// 对自定义类型 转为 json string
+    Application.router.navigateTo(
+        context, Routes.zhuan + "?name=$mName&age=$age&score=$score&sex=$sex");
+  }
+
   static void goHomePage(BuildContext context) {
-    Application.router.navigateTo(context, Routes.search, replace: true);
+    Application.router.navigateTo(context, Routes.root, replace: true);
   }
 
   // 跳转到 会返回参数的 页面

@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart'; // ui库
-
+import 'package:flutter_bqc/config/navigator_util.dart';
 // class AnimApp extends StatefulWidget {
 //   AnimApp({Key key}) : super(key: key);
 
@@ -71,6 +71,8 @@ class _AnimPageState extends State<AnimPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           //TODO 执行动画
+          print('ccc');
+          NavigatorUtils.goHomePage(context);
         },
         child: Icon(Icons.add),
       ),

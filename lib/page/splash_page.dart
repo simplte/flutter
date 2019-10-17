@@ -1,8 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bqc/application.dart';
+import 'package:flutter_bqc/config/application.dart';
 import 'package:fluro/fluro.dart';
+import 'package:flutter_bqc/config/navigator_util.dart';
 
 ///打开APP首页
 class SplashWidget extends StatefulWidget {
@@ -141,7 +142,10 @@ class _CountDownWidgetState extends State<CountDownWidget> {
   /// 取消倒计时的计时器。
   void _cancelTimer() {
     _timer?.cancel();
-    Application.router
-        .navigateTo(context, "/zhuan", transition: TransitionType.inFromRight);
+    String name = 'bqc';
+    int age = 13;
+    double score = 1.1;
+    bool sex = true;
+    NavigatorUtils.goDemoParamsPage(context, name, age, score, sex);
   }
 }
