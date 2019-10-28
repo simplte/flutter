@@ -6,6 +6,7 @@ import 'package:flutter_bqc/page/zhuanzhuan.dart';
 import 'package:flutter_bqc/page/search.dart';
 import 'package:flutter_bqc/page/splash_page.dart';
 import 'package:flutter_bqc/page/home.dart';
+import 'package:flutter_bqc/page/state_management_demo.dart';
 
 var splashHandler = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<Object>> params) {
@@ -31,4 +32,8 @@ var searchHandler = new Handler(
 var homeHandler = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<Object>> params) {
   return HomePage();
+});
+var stateManageHandler = new Handler(
+    handlerFunc: (BuildContext context, Map<String, List<Object>> params) {
+  return StateManagementDemo();
 });
