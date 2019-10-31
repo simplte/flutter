@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bqc/components/bottom_navigation.dart';
+import 'package:flutter_bqc/config/api_base_url.dart';
+import 'package:provider/provider.dart';
 
 // class StateManagementDemo extends StatelessWidget {
 //   int _count = 0;
@@ -42,8 +45,8 @@ class _StateManagementDemoState extends State<StateManagementDemo> {
 
   @override
   Widget build(BuildContext context) {
+    print(URLConfig.apiHost['wingCodeDomain']);
     return CounterProvider(
-        count: _count,
         increaseCount: _increaseCount,
         child: Scaffold(
           appBar: AppBar(
@@ -56,6 +59,7 @@ class _StateManagementDemoState extends State<StateManagementDemo> {
             child: Icon(Icons.add),
             onPressed: _increaseCount,
           ),
+          bottomNavigationBar: BottomNavigator(),
         ));
   }
 }

@@ -12,10 +12,12 @@ var splashHandler = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<Object>> params) {
   return SplashWidget();
 });
+
 var zhuanHandler = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<Object>> params) {
   return AnimPage();
 });
+
 var searchHandler = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<Object>> params) {
   String name = params["name"]?.first;
@@ -29,10 +31,12 @@ var searchHandler = new Handler(
     sex: FluroConvertUtils.string2bool(sex),
   );
 });
+
 var homeHandler = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<Object>> params) {
   return HomePage();
 });
+
 var stateManageHandler = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<Object>> params) {
   return StateManagementDemo();

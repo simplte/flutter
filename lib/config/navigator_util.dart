@@ -20,8 +20,8 @@ class NavigatorUtils {
     String mName = FluroConvertUtils.fluroCnParamsEncode(name);
 
     /// 对自定义类型 转为 json string
-    Application.router.navigateTo(
-        context, Routes.zhuan + "?name=$mName&age=$age&score=$score&sex=$sex");
+    Application.router.navigateTo(context,
+        Routes.stateManage + "?name=$mName&age=$age&score=$score&sex=$sex");
   }
 
   static void goHomePage(BuildContext context) {
